@@ -6,9 +6,13 @@ app = Flask(__name__)
 def index():
 	return 'index'
 
-@app.route('/')
+@app.route('/login')
 def login():
-    return "登录11"
+    return "登录"
+
+@app.route('/logout')
+def logout():
+    return "退出"
 
 if __name__ == '__main__':
     app.run(debug=True)
